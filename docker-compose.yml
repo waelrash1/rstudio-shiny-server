@@ -2,13 +2,13 @@ version: '3'
 services:
   asap-demo:
     #context: .
-    build: .
-    image: waelrash1/r-shiny-studio-forecasting-v1cd  #asap-img
-    container_name: asap-2
+    #build: .
+    image: waelrash1/r-shiny-studio-forecasting #asap-img
+    container_name: wael
     restart: always
     ports:
-      - "1140:8787"
-      - "1150:3838"
+      - "1160:8787"
+      - "1170:3838"
     environment:
      - ROOT= TRUE
      - PASSWORD= "ontheway" 

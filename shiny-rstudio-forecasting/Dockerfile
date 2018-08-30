@@ -1,5 +1,7 @@
 FROM waelrash1/shiny-srv-rstudio3.5.1
-
+RUN apt-get update && apt-get install -y \
+    libv8-dev \
+    libxml2-dev
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 COPY setup.sh /usr/bin/package-setup.sh
 COPY packages.R /usr/bin/packages.R
