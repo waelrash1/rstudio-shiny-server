@@ -1,0 +1,9 @@
+# rstudio and rshiny servers
+sudo docker run -p 1120:8787 -p 1130:3838 -v /wd/rwd:/home/rstudio -v /wd/rwd/shiny-apps/:/srv/shiny-server/ -v/wd/rwd/shiny-logs/:/var/log/shiny-server/  -e ROOT=TRUE -e PASSWORD=ontheway shiny-rstudio3.5.1:latestsudo docker run -p 1120:8787 -p 1130:3838 -v /wd/rwd:/home/rstudio -v /wd
+
+
+
+
+# forcasting docker image
+sudo docker run -p 1120:8787 -p 1130:3838 -v /wd/rwd:/home/rstudio -v /wd/rwd/shiny-apps/:/srv/shiny-server/ -v/wd/rwd/shiny-logs/:/var/log/shiny-server/  -e ROOT=TRUE -e PASSWORD=ontheway shiny-rstudio:forcasting
+

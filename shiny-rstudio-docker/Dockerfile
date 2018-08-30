@@ -26,5 +26,5 @@ EXPOSE 3838 8787
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 #COPY setup.bash /usr/bin/package-setup.bash
 #COPY packages.R /usr/bin/packages.R
-#CMD ["/usr/bin/shiny-server.sh"]
+CMD ["/usr/bin/shiny-server.sh"]
 #CMD ["/usr/bin/package-setup.bash /usr/bin/packages.R"]
