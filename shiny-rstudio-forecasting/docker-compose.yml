@@ -1,0 +1,21 @@
+version: '3'
+services:
+  asap-demo:
+    #context: .
+    build: .
+    #image: asap-img
+    container_name: asap
+    restart: always
+    ports:
+      - "1140:8787"
+      - "1150:3838"
+    environment:
+     - ROOT= TRUE
+     - PASSWORD= "ontheway" 
+    volumes:
+      - /wd/rwd:/home/rstudio
+      - /wd/rwd/shiny-apps:/srv/shiny-server
+      - /wd/rwd/shiny-logs/:/var/log/shiny-server 
+    expose:
+      - 8787
+      - 3838

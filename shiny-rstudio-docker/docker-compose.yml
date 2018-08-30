@@ -1,0 +1,21 @@
+version: '3'
+services:
+  r-for-asap:
+    #context: .
+    build: .
+    image: shiny-srv-rstudio3.5.1
+    container_name: r-shiny-server
+    restart: always
+    ports:
+      - "1120:8787"
+      - "1130:3838"
+    environment:
+     - ROOT= TRUE
+     - PASSWORD= "ontheway" 
+    volumes:
+      - /wd/rwd:/home/rstudio
+      - /wd/rwd/shiny-apps:/srv/shiny-server
+      - /wd/rwd/shiny-logs/:/var/log/shiny-server 
+    expose:
+      - 8787
+      - 3838
