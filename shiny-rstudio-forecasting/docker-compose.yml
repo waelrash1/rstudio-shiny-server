@@ -3,8 +3,8 @@ services:
   asap-demo:
     #context: .
     build: .
-    image: waelrash1/r-shiny-studio-forecasting-v1cd  #asap-img
-    container_name: asap-2
+    image: waelrash1/r-shiny-studio-forecasting  #asap-img
+    container_name: asap
     restart: always
     ports:
       - "1140:8787"
